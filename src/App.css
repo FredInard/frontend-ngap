@@ -1,42 +1,87 @@
+/* 🌐 Conteneur principal */
 #root {
-  max-width: 1280px;
+  max-width: 768px;
   margin: 0 auto;
   padding: 2rem;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  color: #333;
+  background: #f9fafb;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* 📝 Zone de texte */
+textarea {
+  width: 100%;
+  font-size: 1rem;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  resize: vertical;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  margin-bottom: 1.5rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+/* 🚀 Bouton principal centré + moderne */
+button {
+  display: inline-block;
+  margin: 0 auto;
+  padding: 0.75rem 2rem;
+  font-weight: 600;
+  font-size: 1rem;
+  color: white;
+  background: linear-gradient(90deg, #6366f1, #4f46e5);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 10px rgba(99, 102, 241, 0.25);
 }
 
-.card {
-  padding: 2em;
+button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(79, 70, 229, 0.35);
 }
 
-.read-the-docs {
-  color: #888;
+button:disabled {
+  background: #a5b4fc;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* 🔍 Résultats et JSON */
+pre {
+  background-color: #ffffff;
+  padding: 1rem;
+  text-align: left;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  font-size: 0.95rem;
+  overflow-x: auto;
+  margin-top: 1rem;
+}
+
+/* 🟢 Liste des soins */
+ul {
+  text-align: left;
+  padding-left: 1.5rem;
+  margin-top: 1rem;
+  display: inline-block;
+  text-align: left;
+}
+
+li {
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+}
+
+/* ⚠️ Message d'erreur */
+p[style*="color: red"] {
+  background: #fee2e2;
+  border: 1px solid #fecaca;
+  padding: 0.75rem;
+  border-radius: 6px;
+  color: #b91c1c;
+  font-weight: 500;
+  margin-top: 1rem;
+  display: inline-block;
 }
